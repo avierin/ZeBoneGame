@@ -1,0 +1,44 @@
+﻿TODO
+	Wendesday
+		Have an Image to all bones
+			DONE
+
+
+	Thrusday
+		Introduced Image Selector
+		Introduced No Sql DB
+
+
+	Friday		
+		BUG
+			Correct Score		DONE
+			Fix Graphix
+				Bone Name on TOP	DONE
+				Center Bone Image DONE
+			On enter validate answer
+			Make question random
+
+			Make an end screen rather than crash
+				requires view maker
+				
+			Some Bones Do not have images
+			There are two nasal question
+			Some Bones have images with text
+				requires independant librairy
+			
+
+
+		Infrastructure
+			Make a correct repository
+			Use Inversion of control ?
+
+
+		Put things on Git 
+
+
+
+		Infrasctrusture
+			Use IOC for repositories ?
+
+			
+
