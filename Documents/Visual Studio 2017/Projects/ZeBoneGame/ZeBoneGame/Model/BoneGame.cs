@@ -47,7 +47,6 @@ namespace ZeBoneGame.Model
                 _questions.AddRange(db.GetCollection<WhatQuestion>("whatQuestions").FindAll());
             }
 
-
             _questions.Shuffle();
             _currentQuestion = _questions[0];
         }

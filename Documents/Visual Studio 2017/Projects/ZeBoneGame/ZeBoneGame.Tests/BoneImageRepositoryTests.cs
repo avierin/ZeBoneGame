@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using ZeBoneGame.Model;
 using System.IO;
 using System.Collections.Generic;
+using ZeBoneGame.Infra;
 
 namespace ZeBoneGame.Tests
 {
@@ -27,6 +28,33 @@ namespace ZeBoneGame.Tests
 
                 boneImageRep.GetImage(bone);
             }
+        }
+
+
+        [TestMethod]
+        public void TestWhatQuestionAreUnique()
+        {
+            var boneListRep = new BoneRepository();
+            var boneList = boneListRep.GetBones();
+            
+            List<WhatQuestion> questions = new List<WhatQuestion>();
+            using (var db = Gr.GetLiteDb())
+            {
+                var questionsRep = db.GetCollection<WhatQuestion>("whatQuestions");
+                foreach(var bone in boneList)
+                {
+                    var boneQuestions = new List<WhatQuestion>( questionsRep.Find(q => q.Answer == bone));
+
+                    for (int i = 1; i < boneQuestions.Count; i++)
+                    {
+                        questionsRep.Delete(boneQuestions[i].Id);
+                        
+                            
+                    }
+                }
+            }
+
+
         }
 
 

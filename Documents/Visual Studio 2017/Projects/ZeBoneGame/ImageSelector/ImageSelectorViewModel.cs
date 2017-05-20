@@ -69,10 +69,13 @@ namespace ImageSelector
 
                     if (whats.Count == 0)
                     {
-                        CurrentBone = _bones[0];
+                        CurrentBone = bone;
                         break;
                     }
                 }
+
+                if (CurrentBone == null)
+                    CurrentBone = _bones[0];
             }
 
            
